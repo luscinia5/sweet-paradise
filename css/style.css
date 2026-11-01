@@ -1,0 +1,130 @@
+:root {
+  --cream: #FBF8F3;
+  --blush: #F3D9D6;
+  --rose-gold: #C79A83;
+  --copper: #7A5A4A;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--copper);
+  font-family: "Montserrat", system-ui, sans-serif;
+  background:
+    radial-gradient(ellipse at 50% 0%, var(--blush) 0%, transparent 60%),
+    var(--cream);
+}
+
+.splash {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 1.25rem 1rem;
+  text-align: center;
+}
+
+.logo {
+  width: min(78vw, 400px, 52vh);
+  height: auto;
+  animation: fade-up 1.2s ease-out both;
+}
+
+.headline {
+  margin: 1.5rem 0 0;
+  font-size: clamp(0.95rem, 2.8vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  /* offset the trailing letter-space so the text looks centered */
+  padding-left: 0.4em;
+  text-transform: uppercase;
+  animation: fade-up 1.2s 0.25s ease-out both;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 1.5rem 0;
+  color: var(--rose-gold);
+  animation: fade-up 1.2s 0.4s ease-out both;
+}
+
+.divider span {
+  display: block;
+  width: clamp(40px, 12vw, 80px);
+  height: 1px;
+  background: currentColor;
+}
+
+.follow {
+  animation: fade-up 1.2s 0.55s ease-out both;
+}
+
+.follow-title {
+  margin: 0 0 0.9rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social a {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--rose-gold);
+  border-radius: 50%;
+  color: var(--copper);
+  transition: background-color 0.25s, color 0.25s, transform 0.25s;
+}
+
+.social a:hover,
+.social a:focus-visible {
+  background: var(--rose-gold);
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+
+.social a:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 3px;
+}
+
+.social svg { width: 22px; height: 22px; }
+
+.footer {
+  padding: 1.25rem 1rem 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
