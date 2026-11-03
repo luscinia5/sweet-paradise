@@ -3,9 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sweet Paradise | Nevería &amp; Ice Cream | Opening Soon</title>
-  <meta name="description" content="Sweet Paradise, a nevería and ice cream shop, is opening soon. Follow us for updates.">
+  <title data-i18n="splash.pageTitle">Sweet Paradise | Nevería &amp; Ice Cream | Opening Soon</title>
+  <meta name="description" content="Sweet Paradise, a nevería and ice cream shop, is opening soon. Follow us for updates."
+        data-i18n-attr="content:splash.metaDescription">
   <meta name="theme-color" content="#FBF8F3">
+
+  <!-- Hides text until the translation loads (avoids an English flash); gives up after 2s -->
+  <script>
+    document.documentElement.classList.add("i18n-pending");
+    setTimeout(function () { document.documentElement.classList.remove("i18n-pending"); }, 2000);
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" href="favicon/favicon.ico" sizes="48x48">
@@ -25,11 +32,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="lang-switch" aria-label="Language" data-i18n-attr="aria-label:common.language">
+      <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+    </nav>
+  </header>
+
   <main class="splash">
     <img class="logo" src="images/sweet_paradise_logo_900.png" width="900" height="866"
          alt="Sweet Paradise, Nevería and Ice Cream">
 
-    <h1 class="headline" data-i18n="headline">Opening Soon</h1>
+    <h1 class="headline" data-i18n="splash.headline">Opening Soon</h1>
+
+    <a class="btn" href="menu.html" data-i18n="splash.viewMenu">View Menu</a>
 
     <div class="divider" aria-hidden="true">
       <span></span>
@@ -38,11 +54,11 @@
     </div>
 
     <section class="follow" aria-labelledby="follow-title">
-      <h2 id="follow-title" class="follow-title" data-i18n="follow">Follow us</h2>
+      <h2 id="follow-title" class="follow-title" data-i18n="splash.follow">Follow us</h2>
       <ul class="social">
         <!-- TODO: replace each href="#" with the real profile URL -->
         <li>
-          <a href="#" aria-label="Instagram" data-i18n-attr="aria-label:instagram">
+          <a href="#" aria-label="Instagram" data-i18n-attr="aria-label:splash.instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
               <circle cx="12" cy="12" r="4.2"/>
@@ -51,14 +67,14 @@
           </a>
         </li>
         <li>
-          <a href="#" aria-label="Facebook" data-i18n-attr="aria-label:facebook">
+          <a href="#" aria-label="Facebook" data-i18n-attr="aria-label:splash.facebook">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
             </svg>
           </a>
         </li>
         <li>
-          <a href="#" aria-label="TikTok" data-i18n-attr="aria-label:tiktok">
+          <a href="#" aria-label="TikTok" data-i18n-attr="aria-label:splash.tiktok">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M9 12.5a4 4 0 1 0 4 4V3.5a5 5 0 0 0 5 5"/>
             </svg>
@@ -72,6 +88,6 @@
     <small>&copy; <span id="year">2026</span> Sweet Paradise</small>
   </footer>
 
-  <script src="js/i18n.js"></script>
+  <script src="js/i18n.js" defer></script>
 </body>
 </html>

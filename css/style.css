@@ -120,6 +120,290 @@ body {
   opacity: 0.75;
 }
 
+html.i18n-pending body { visibility: hidden; }
+
+/* ---------- header + language switch ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  padding: 1rem 1.25rem 0;
+}
+
+.site-header .lang-switch { margin-left: auto; }
+
+.lang-switch { display: flex; gap: 0.25rem; }
+
+.lang-switch button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 0.6rem;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: none;
+  color: var(--copper);
+  font: 500 0.75rem "Montserrat", system-ui, sans-serif;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.25s, border-color 0.25s;
+}
+
+.lang-switch button:hover,
+.lang-switch button[aria-pressed="true"] { opacity: 1; }
+
+.lang-switch button[aria-pressed="true"] { border-bottom-color: var(--rose-gold); }
+
+.lang-switch button:focus-visible,
+.home-link:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 3px;
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--copper);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.home-link:hover { color: var(--rose-gold); }
+
+/* ---------- "View Menu" button ---------- */
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.85rem calc(2rem - 0.25em) 0.85rem 2rem; /* trailing letter-space offset */
+  border: 1px solid var(--rose-gold);
+  border-radius: 999px;
+  color: var(--copper);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.25s, color 0.25s, transform 0.25s;
+  animation: fade-up 1.2s 0.35s ease-out both;
+}
+
+.btn:hover {
+  background: var(--rose-gold);
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+
+/* ---------- menu page ---------- */
+.menu {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  padding: 0.5rem 1.25rem 2rem;
+}
+
+.menu-title {
+  margin: 0.5rem 0 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 7vw, 3.2rem);
+}
+
+.menu .divider { justify-content: center; margin: 1rem 0 2rem; }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 700px) {
+  .menu-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+
+/* centers the lone 9th card in the 2-column phone layout */
+@media (max-width: 699px) {
+  .menu-grid li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 0.5rem);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--rose-gold);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--cream);
+  color: var(--copper);
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card-image,
+.dialog-media {
+  display: block;
+  background: var(--blush);
+}
+
+.card-image { aspect-ratio: 1; }
+
+.card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.is-placeholder img {
+  object-fit: contain;
+  padding: 25%;
+  opacity: 0.7;
+}
+
+.card-name {
+  padding: 0.8rem 0.6rem;
+  border-top: 1px solid var(--rose-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(122, 90, 74, 0.15);
+  }
+}
+
+.card:active { transform: scale(0.98); }
+
+.card:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 3px;
+}
+
+/* ---------- item dialog ---------- */
+.dialog {
+  width: 100%;
+  max-width: min(520px, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--copper);
+  overflow: visible;
+  animation: pop-in 0.25s ease-out;
+}
+
+.dialog::backdrop {
+  background: rgba(122, 90, 74, 0.4);
+  backdrop-filter: blur(3px);
+}
+
+.dialog-card {
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  border: 1px solid var(--rose-gold);
+  border-radius: 20px;
+  background: var(--cream);
+}
+
+.dialog-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 55dvh;
+  object-fit: cover;
+}
+
+.dialog-body { padding: 1.25rem 1.5rem 1.75rem; text-align: center; }
+
+.dialog-name {
+  margin: 0 0 0.6rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+  line-height: 1.15;
+}
+
+.dialog-description {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--rose-gold);
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--copper);
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.dialog-close:hover { background: var(--rose-gold); color: var(--cream); }
+
+.dialog-close:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 3px;
+}
+
+.dialog-close svg { width: 18px; height: 18px; }
+
+body:has(dialog[open]) { overflow: hidden; }
+
+/* phones: slides up from the bottom as a sheet */
+@media (max-width: 599px) {
+  .dialog {
+    margin: auto 0 0;
+    max-width: 100%;
+    max-height: 92dvh;
+    animation: sheet-in 0.3s ease-out;
+  }
+
+  .dialog-card {
+    max-height: 92dvh;
+    border-bottom: 0;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes sheet-in {
+  from { transform: translateY(100%); }
+  to   { transform: none; }
+}
+
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: none; }
