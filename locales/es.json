@@ -7,6 +7,7 @@
     "metaDescription": "Sweet Paradise, una nevería y heladería, abrirá muy pronto. ¡Síguenos para enterarte de las novedades!",
     "headline": "Próximamente",
     "viewMenu": "Ver menú",
+    "findUs": "Encuéntranos",
     "follow": "Síguenos",
     "instagram": "Instagram",
     "facebook": "Facebook",
@@ -20,14 +21,41 @@
     "close": "Cerrar"
   },
   "items": {
-    "item1": { "name": "Lorem Ipsum 1", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-    "item2": { "name": "Lorem Ipsum 2", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-    "item3": { "name": "Lorem Ipsum 3", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-    "item4": { "name": "Lorem Ipsum 4", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-    "item5": { "name": "Lorem Ipsum 5", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-    "item6": { "name": "Lorem Ipsum 6", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-    "item7": { "name": "Lorem Ipsum 7", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-    "item8": { "name": "Lorem Ipsum 8", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-    "item9": { "name": "Lorem Ipsum 9", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+    "item1": {
+       "name": "Elote en vaso", 
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      },
+    "item2": {
+       "name": "Elote", 
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      },
+    "item3": {
+       "name": "Nachos", 
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      },
+    "item4": {
+       "name": "Biónico", 
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      },
+    "item5": {
+       "name": "La sabrosita", 
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      },
+    "item6": {
+       "name": "Deli wafle", 
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      },
+    "item7": {
+       "name": "Frapé", 
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      },
+    "item8": {
+       "name": "Aguas frescas", 
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      },
+    "item9": {
+       "name": "Mangonada", 
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      }
   }
 }

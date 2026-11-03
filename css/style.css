@@ -177,9 +177,16 @@ html.i18n-pending body { visibility: hidden; }
 .home-link:hover { color: var(--rose-gold); }
 
 /* ---------- "View Menu" button ---------- */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
 .btn {
   display: inline-block;
-  margin-top: 1.5rem;
   padding: 0.85rem calc(2rem - 0.25em) 0.85rem 2rem; /* trailing letter-space offset */
   border: 1px solid var(--rose-gold);
   border-radius: 999px;
