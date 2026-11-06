@@ -20,22 +20,22 @@
     "back": "← Home",
     "close": "Close"
   },
-  "items": {
+"items": {
     "item1": { 
       "name": "Corn on the cob", 
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+      "description": "Whole sweet corn on the cob coated in mayo, cheese, and chili." 
     },
     "item2": {
        "name": "Corn", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Warm sweet corn kernels served in a cup with mayonnaise, cheese, and spice." 
       },
     "item3": {
        "name": "Nachos", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Crispy tortilla chips topped with warm, melted nacho cheese and jalapeños." 
       },
     "item4": {
        "name": "Biónico", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Chopped mixed fruit drenched in a sweet cream sauce and topped with granola." 
       },
     "item5": {
        "name": "La Sabrosita", 
@@ -47,15 +47,15 @@
       },
     "item7": {
        "name": "Frappe", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "A blended, sweet iced beverage topped with whipped cream and rich syrup." 
       },
     "item8": {
        "name": "Fresh Waters", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Refreshing traditional Mexican fruit beverages, known as aguas frescas." 
       },
     "item9": {
        "name": "Mangonada", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Frozen mango slush layered with savory chamoy sauce and chili-lime salt." 
       }
   }
 }

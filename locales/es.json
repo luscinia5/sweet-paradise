@@ -20,22 +20,22 @@
     "back": "← Inicio",
     "close": "Cerrar"
   },
-  "items": {
+"items": {
     "item1": {
        "name": "Elote en vaso", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Granos de elote calientes servidos en un vaso con mayonesa, queso y chile." 
       },
     "item2": {
        "name": "Elote", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Elote dulce entero en mazorca cubierto con mayonesa, queso y chile." 
       },
     "item3": {
        "name": "Nachos", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Crujientes totopos de maíz bañados en queso caliente derretido y jalapeños." 
       },
     "item4": {
        "name": "Biónico", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Fruta mixta picada bañada en una crema dulce especial y cubierta con granola." 
       },
     "item5": {
        "name": "La sabrosita", 
@@ -47,15 +47,15 @@
       },
     "item7": {
        "name": "Frapé", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Bebida dulce mezclada con hielo, cubierta con crema batida y rico jarabe." 
       },
     "item8": {
        "name": "Aguas frescas", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Bebidas tradicionales mexicanas muy refrescantes elaboradas con fruta natural." 
       },
     "item9": {
        "name": "Mangonada", 
-       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+       "description": "Granizado de mango helado en capas con salsa de chamoy y sal de chile con limón." 
       }
   }
 }
